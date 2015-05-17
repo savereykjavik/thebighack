@@ -84,10 +84,10 @@ h7 {
 
 #permlogo {
   position: absolute;
-/*  top:15px;
-  left: 30px;*/
-  top: 2vw;
+  top:15px;
   left: 5vw;
+/*  top: 2vw;
+  left: 5vw;*/
   z-index: 1040;
   width: 200px;
   height: 200px;
