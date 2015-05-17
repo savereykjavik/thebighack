@@ -17,7 +17,7 @@ $(document).ready(function (){
 
   // prepare the map properties
   var options = {
-    zoom: 15,
+    zoom: 13,
     center: latlng,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     navigationControl: true,
