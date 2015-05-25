@@ -8,20 +8,51 @@
 
   <!-- attach CSS styles -->
   <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>  
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet" />
-</head>
-<body>
+  <link href="images/circlelogotransp.png" type="x=icon" rel="shortcut icon"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-63172658-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>$(document).ready(function(){
+  $('a[href^="#"]').on('click',function (e) {
+      e.preventDefault();
+      
+      var target = this.hash; 
+      var $target = $(target) ;
+
+      $('html, body').stop().animate({
+          'scrollTop': $target.offset().top - 120
+      }, 900, 'swing'); /* function () {
+          window.location.hash = target;
+      });*/
+  });
+});</script>
+
+
+</head>
+
+<body>
   <div id="permlogo">
-  <img id="biglogo" src="images/circlelogotransp.png"/>
+    <img id="biglogo" src="images/circlelogotransp.png"/>
   </div>
 
   <!-- navigation panel -->
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
+      
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
@@ -30,18 +61,18 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-<!--         <a class="navbar-brand" href="#">THE BIG HACK WORKSHOP</a> -->
       </div>
 
       <div class="collapse navbar-collapse" id="navbar-collapse-main">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#home">Home</a></li>
-          <li><a href="#services">Our Mission</a></li>          
+          <li><a href="#about">Our Mission</a></li>         
           <li><a href="#services">Our Workshops</a></li>
-          <li><a href="#google_map">Inspiration</a></li>
-          <li><a href="#google_map">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
+  
     </div><!-- /.container-fluid -->
   </nav>
 
@@ -50,9 +81,9 @@
     <div class="text-vcenter">
       <div class="columntext">
         <h1>The big hack workshop</h1>
-        <h3>We help build teams that build great things!</h3>
-        <a href="#about" id="firstbtn" class="btn btn-default btn-lg">Book our workshops</a>
-         <a href="#about" class="btn btn-default btn-lg">Learn more</a>
+        <h3>Team development with DIY tech. Because building things together creates great teams!</h3>
+        <a href="#services" id="firstbtn" class="btn btn-default btn-lg">Book our workshops</a>
+         <a href="#information" class="btn btn-default btn-lg">Learn more</a>
       </div>
     </div>
   </div>
@@ -65,16 +96,16 @@
       <h7>We are proud to have collaborated with</h7>
       <div class="row">
         <div class="col-sm-3 col-xs-6">
-          <img src="images/hyperisland.png"/>
+          <a href="https://www.hyperisland.com/"  target="_blank"><img src="images/hyperisland.png"/></a>
         </div>
         <div class="col-sm-3 col-xs-6">
-          <img src="images/fryshuset.png"/>
+          <a href="http://fryshuset.se/in-english/"  target="_blank"><img src="images/fryshuset.png"/></a>
         </div>
         <div class="col-sm-3 col-xs-6">
-          <img src="images/makerspark.png"/>
+          <a href="http://www.makerspark.se/"  target="_blank"><img src="images/makerspark.png"/></a>
         </div>
          <div class="col-sm-3 col-xs-6">
-          <img src="images/absolut.png"/>
+          <a href="http://www.absolut.com/se/"  target="_blank"><img src="images/absolut.png"/></a>
         </div>
 
       </div>
@@ -82,47 +113,77 @@
   </div>
 <!-- end brands -->
 
-    <!-- third section - Services -->
+<!-- fourth section - Information -->
+  <div id="information" class="pad-section">
+      <div class="columntext">
+        <h1>Learn, make, share.</h1>
+        <h3>Explore team and technology with us. We enable teams to grow, be inspired and to explore the world of creative technologies together (without any previous experience needed).</h3>
+      </div>
+  </div>
+<!-- /fourth section -->
+
+<!-- third section - Services -->
   <div id="services" class="pad-section">
-    <div class="container">
-      <h2 class="text-center">Our Workshops</h2></br>
-       <h4 class="text-center">All our workshops... blablbalbla bla huofa guffgi iuagif</h4>  <hr/>
+    <div class="container workshops">
+      <h2 class="text-center">Our Workshops</h2><br/>
+      <div class="col-md-6 workshops">
+        <p> We believe in making, sharing and learning from eachother. And that great teams do just that! All we need from you in order to do this is: <br/>
+        - A space to be (eg. a conference-room) <br/> - 1-3 hours of your time, for our predesigned workshops.
+      </p></div>
+      <div class="col-md-6 workshops">
+         <p> If you feel like leaving the office for a breath of fresh air and haven't booked a place already, we can help you arrange this at a Maker-space in Stockholm. - Simple huh? To get a quote or ask questions don´t hesitate to <a href="#contact" style="color: #FFF;"><i>contact us</i></a>, we are sure we can have fun, make great things and be creative together!</p>
+      <br/>
+      <br/>
+      </div>
+     <h2 class="row"> </h2><hr/><br/>
+       
       <div class="row text-center">
-        <div class="col-sm-3 col-xs-6">
-          <i class="glyphicon glyphicon-cloud"> </i>
-          <h4>Minihack & team development 1-2 h</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in sem cras amet. Donec in sem cras amet.</p>
+        <div class="col-md-4  workshops">
+<!--           <i class="glyphicon glyphicon-cloud"> </i> -->
+          <h3>Short & Sweet</h3>
+          <li style="text-align:left; list-style-type: none;">Time: 1 hour</li><br/>
+          <p>Are you planning an afterwork, or would you like to disrupt a full conference-day with an hour of fun and creativity? What we need is a space to be, and about an hour of your time! We will build things together using creative technologies and at the same time explore simple tools to use for team-development. Guaranteed to spark your creativity and energy as a team.</p><hr/>
         </div>
-        <div class="col-sm-3 col-xs-6">
-          <i class="glyphicon glyphicon-leaf"> </i>
-          <h4>Internet of Things & team development 2-4 h</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in sem cras amet. Donec in sem cras amet.</p>
+        <div class="col-md-4  workshops">
+<!--           <i class="glyphicon glyphicon-leaf"> </i> -->
+          <h3>Creative Boost</h3>
+          <li style="text-align:left; list-style-type: none;">Time: 2-3 hours</li><br/>
+          <p>This two hour workshop will give you a more contextualised experience of creative tech and team-building. Together we will develop and create technology prototypes through creative ideations that are easy to grasp and to take home and start working with. This is perfect as an inspirational disruptor at your office during office hours, team days, or as an 'afterworkshop'.</p><hr/>
         </div>
-        <div class="col-sm-3 col-xs-6">
-          <i class="glyphicon glyphicon-phone-alt"> </i>
-          <h4>Robots fullday & team development 1 day</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in sem cras amet. Donec in sem cras amet.</p>
-        </div>
-        <div class="col-sm-3 col-xs-6">
-          <i class="glyphicon glyphicon-bullhorn"> </i>
-          <h4>Tailored workshops, hackathons & courses</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in sem cras amet. Donec in sem cras amet.</p>
+        <div class="col-md-4  workshops">
+<!--           <i class="glyphicon glyphicon-phone-alt"> </i> -->
+          <h3>Custom event</h3>
+          <li style="text-align:left; list-style-type: none;">Time: Flexible</li><br/>
+          <p>We would like to teach you as much as possible about entering the world of Internet of Things and creative technology. We are able to offer you a customized program or full-day where we can move more into depth with both team-development and hands on with the tech. <br/> Together with you we customize it to be suited for your needs.</p><hr/>
         </div>
       </div>
     </div>
   </div>
-  <!-- /third section -->
+<!-- /third section -->
 
-  <!-- second section - About -->
+<!-- second section - About -->
   <div id="about" class="pad-section">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6">
-<!--           <img src="images/logocircle.png" alt="" /> -->
+
+        <div id="abouttext" class="col-sm-6 text-center">
+          <h2>Our Mission, Our Manifesto</h2>
+           <hr/>
         </div>
-        <div class="col-sm-6 text-center">
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in sem cras amet.</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum metus et ligula venenatis, at rhoncus nisi molestie. Pellentesque porttitor elit suscipit massa laoreet metus.</p>
+
+        <div class="row" id="manifesto">
+
+          <p>On a sunny day and a rainy afternoon the Big Hack team (thats us; Alex, Caroline, Emil, Fredrik, Nima, Micaela) concluded our manifesto, putting into words what we want to create, and what we believe in. Which is ultimately teams and people, and making technology interesting and accessible to anyone.
+          </br>
+        </br>
+          - Our theory is that making is empowering. With knowledge comes the freedom to create your own stories, and to <i>own</i> your own stories. Why is making self-fulfilling? We believe that making is embedded in who we are - and that learning by doing is the key to empower people to create. We all need to be co-creators of the world we build upon technology. <b>Make</b> through experimenting, <b>learn</b> from your failures and <b>share</b> your improvements. </br>
+
+          By reading this you have already taken the next step on your lifelong journey to acquire more knowledge. You are a co-founder of this world, and we merely want to be the facilitators on this journey. We will provide you with points of reference but no solution. Don’t worry, you will find the solution yourself and then you will own it. Through our facilitation we intend to simplify the first steps into our common world of technology, and make it more approachable. Until we can all stand steady on our own two feet. Learn with your team, make great things, and share your knowledge!</p>
+
+          <p>/The Big Hack Team</p>
+
+          </div>
+
         </div>
       </div>
     </div>
@@ -130,65 +191,28 @@
   <!-- /second section -->
 
 
-  <!-- fourth section - Information -->
-  <div id="information" class="pad-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h2 class="panel-title">Some blogposts maybe</h2>
-            </div>
-            <div class="panel-body lead">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit adipiscing blandit. Aliquam placerat, velit a fermentum fermentum, mi felis vehicula justo, a dapibus quam augue non massa. Duis euismod, augue et tempus consequat, lorem mauris porttitor quam, consequat ultricies mauris mi a metus. Phasellus congue, leo sed ultricies tristique, nunc libero tempor ligula, at varius mi nibh in nisi. Aliquam erat volutpat. Maecenas rhoncus, neque facilisis rhoncus tempus, elit ligula varius dui, quis amet. 
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h2 class="panel-title">Some inspiration mayb</h2>
-            </div>
-            <div class="panel-body lead">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit adipiscing blandit. Aliquam placerat, velit a fermentum fermentum, mi felis vehicula justo, a dapibus quam augue non massa. Duis euismod, augue et tempus consequat, lorem mauris porttitor quam, consequat ultricies mauris mi a metus. Phasellus congue, leo sed ultricies tristique, nunc libero tempor ligula, at varius mi nibh in nisi. Aliquam erat volutpat. Maecenas rhoncus, neque facilisis rhoncus tempus, elit ligula varius dui, quis amet. 
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- /fourth section -->
 
-  <!-- fifth section -->
-  <div id="services" class="pad-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 text-center">
-          <h3>Mission Vision Manifesto</h3>
-          <h4>The next is the address on Google maps</h4>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- /fifth section -->
 
-  <!-- google map -->
-  <div id="google_map"></div>
-  <!-- /google map -->
 
   <!-- footer -->
   <footer>
     <hr />
-    <div class="container">
-      <p class="text-right">Copyright &copy; Your Company 2014</p>
+    <div id="contact"class="container">
+      <p class="text-left" style="color:#000000; position:relative;">e-mail: mail@thebighack.se</p>
+      <p class="text-left" style="color:#000000;">Phone: 0707-589777</p>
+      <a href="https://www.facebook.com/thebighackworkshop"  target="_blank"><p class="text-left" style="color:#000000;">Facebook</p></a>
+      <a href="https://instagram.com/bighackworkshop"  target="_blank"><p class="text-left" style="color:#000000;">Instagram</p></a>
+      <a href="https://www.linkedin.com/company/the-big-hack?trk=top_nav_home"  target="_blank"><p class="text-left" style="color:#000000;">Linkedin</p></a>
+      <p class="text-right" style="color:#000000;">Copyright &copy; the BIG hack</p>
     </div>
   </footer>
   <!-- /footer -->
 
   <!-- attach JavaScripts -->
-  <script src="js/jquery-1.10.2.js"></script>
+  <!-- <script src="js/jquery-1.10.2.js"></script> -->
   <script src="js/bootstrap.min.js"></script>
   <script src="//maps.google.com/maps/api/js?sensor=true"></script>
   <script src="js/main.js"></script>
+  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us10.list-manage.com","uuid":"76ad617ff79ef4c41d4ec7f4c","lid":"86f7a2f5f4"}) })</script>
 </body>
 </html>
